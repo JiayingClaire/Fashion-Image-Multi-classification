@@ -12,8 +12,10 @@ Points = 0.25 * A + 0.25 * B + 0.5 * C
 
 where
 
-A is the proportion of the training rows that is utilized in the model. 
-B = min(1,X/60), where X is the running time of the selected algorithm in seconds. Algorithms that take at least 1 minute to run will have the value B = 1, which incurs the full run-time penalty.
-C is the proportion of the predictions on the testing set that are incorrectly classified.
+* A is the proportion of the training rows that is utilized in the model. 
+
+* B = min(1,X/60), where X is the running time of the selected algorithm in seconds. Algorithms that take at least 1 minute to run will have the value B = 1, which incurs the full run-time penalty.
+
+* C is the proportion of the predictions on the testing set that are incorrectly classified.
 
 In this project, we created and evaluated different machine learning models on different sample sizes. The quality of different combinations of the models and the sample sizes can be compared based on their Points. The overall goal is to build a classification method that minimizes the value of Points. In this setting, the ideal algorithm would use as little data as possible, implement the computation as quickly as possible, and accurately classify as many items in the testing set as possible. In practice, there are likely to be trade-offs.
